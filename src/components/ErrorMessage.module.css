@@ -1,0 +1,18 @@
+.error-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+ 
+  border: 1px solid #f28c38; 
+  color: #d9480f; 
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 0 8px rgba(242, 140, 56, 0.15);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.error-icon {
+  font-size: 19px;
+}

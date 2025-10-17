@@ -1,0 +1,12 @@
+.posts-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: left;
+  margin: 20px 5px;
+  font-size: 40px;
+  color: peru;
+}

@@ -1,0 +1,17 @@
+.post-placeholder {
+  background: #fffaf6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 12px;
+}
+.title,
+.body {
+  background-color: rgba(102, 63, 31, 0.342);
+  border-radius: 4px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.body {
+  width: 80%;
+}

@@ -3,5 +3,13 @@ export interface PostType {
   id: number;
   title: string;
   body: string;
-} 
+}
 
+export interface AuthorType {
+  id: number;
+  name: string;
+  email: string;
+  company: {
+    name: string;
+  };
+}

@@ -1,39 +1,23 @@
-import { useState, useEffect } from "react";
 import Posts from "./Posts";
 import ErrorMessage from "./ErrorMessage";
 import Loader from "./Loader";
 import styles from "./PostContainer.module.css";
-import axios from "axios";
+import useFetch from "../hooks/useFetch";
+import type { PostType } from "../types";
 
 function PostContainer() {
-  const [posts, setPosts] = useState([]);
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const { fetchedData, error, isLoading } = useFetch<PostType[]>(
+    "https://jsonplaceholder.typicode.com/posts"
+  );
 
-  useEffect(function () {
-    async function fetchData() {
-      setIsLoading(true);
-      try {
-        const res = await axios.get(
-          "https://jsonplaceholder.typicode.com/posts"
-        );
-        setPosts(res.data);
-      } catch (err) {
-        if (typeof err === "string") setError(err);
-        else if (err instanceof Error) setError(err.message);
-        else setError("Something went wrong!");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchData();
-  }, []);
+
   return (
     <div className={styles["posts-container"]}>
       <h1>Posts</h1>
+      {!fetchedData && <Loader />}
       {isLoading && <Loader />}
       {!isLoading && error && <ErrorMessage message={error} />}
-      {!isLoading && !error && <Posts posts={posts} />}
+      {!isLoading && !error && <Posts posts={fetchedData} />}
     </div>
   );
 }

@@ -4,9 +4,10 @@ import ErrorMessage from "./ErrorMessage";
 import Loader from "./Loader";
 import type { PostType } from "../types";
 import PostAuthor from "./PostAuthor";
+import Comments from "./Comments";
 
 function PostDetails() {
-  const { id } = useParams<{ id: string }>();
+  const { id } = useParams();
   const { fetchedData, error, isLoading } = useFetch<PostType>(
     `https://jsonplaceholder.typicode.com/posts/${id}`
   );
@@ -23,6 +24,7 @@ function PostDetails() {
           <h2>{fetchedData?.title}</h2>
           <p>{fetchedData?.body}</p>
           {authorId && <PostAuthor authorId={authorId} />}
+          {id && <Comments postId={id} />}
         </div>
       )}
     </div>

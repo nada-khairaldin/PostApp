@@ -1,4 +1,4 @@
-import type { commentType } from "../types";
+import type { commentType } from "../../types";
 
 function Comment({ comment }: { comment: commentType }) {
   return (

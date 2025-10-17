@@ -1,7 +1,7 @@
 import useFetch from "../hooks/useFetch";
 import type { AuthorType } from "../types";
-import ErrorMessage from "./ErrorMessage";
-import Loader from "./Loader";
+import ErrorMessage from "./ErrorMessage/ErrorMessage";
+import Loader from "./Loader/Loader";
 
 function PostAuthor({ authorId }: { authorId: number }) {
   const { fetchedData, error, isLoading } = useFetch<AuthorType>(

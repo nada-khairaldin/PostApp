@@ -1,8 +1,8 @@
-import useFetch from "../hooks/useFetch";
-import type { commentType } from "../types";
-import Comment from "./comment";
-import ErrorMessage from "./ErrorMessage";
-import Loader from "./Loader";
+import useFetch from "../../hooks/useFetch";
+import type { commentType } from "../../types";
+import Comment from "../Comment/Comment";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import Loader from "../Loader/Loader";
 
 function Comments({ postId }: { postId: string }) {
   const { fetchedData, error, isLoading } = useFetch<commentType[]>(

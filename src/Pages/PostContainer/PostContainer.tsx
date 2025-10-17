@@ -1,6 +1,6 @@
-import Posts from "./Posts";
-import ErrorMessage from "./ErrorMessage";
-import Loader from "./Loader";
+import Posts from "./Posts/Posts";
+import ErrorMessage from "./ErrorMessage/ErrorMessage";
+import Loader from "./Loader/Loader";
 import styles from "./PostContainer.module.css";
 import useFetch from "../hooks/useFetch";
 import type { PostType } from "../types";
@@ -9,7 +9,6 @@ function PostContainer() {
   const { fetchedData, error, isLoading } = useFetch<PostType[]>(
     "https://jsonplaceholder.typicode.com/posts"
   );
-
 
   return (
     <div className={styles["posts-container"]}>

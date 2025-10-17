@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PostContainer from "./components/PostContainer";
-import PostDetails from "./components/PostDetails";
+import PostContainer from "./Pages/PostContainer";
+import PostDetails from "./Pages/PostDetails/PostDetails";
 function App() {
   return (
     <BrowserRouter>

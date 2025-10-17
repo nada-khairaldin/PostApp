@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import useFetch from "../hooks/useFetch";
-import ErrorMessage from "./ErrorMessage";
-import Loader from "./Loader";
-import type { PostType } from "../types";
+import useFetch from "../../hooks/useFetch";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import Loader from "../../components/Loader/Loader";
+import type { PostType } from "../../types";
 import PostAuthor from "./PostAuthor";
-import Comments from "./Comments";
+import Comments from "../../components/Comments/Comments";
 
 function PostDetails() {
   const { id } = useParams();

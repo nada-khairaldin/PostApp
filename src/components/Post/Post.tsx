@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import type { PostType } from "../types";
+import type { PostType } from "../../types";
 import styles from "./Post.module.css";
 function Post({ post }: { post: PostType }) {
   return (

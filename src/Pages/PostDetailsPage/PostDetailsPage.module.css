@@ -1,0 +1,21 @@
+.post-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.post-heading {
+  margin: 20px 10px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #5a4fcf;
+}
+
+.post-content {
+  margin: 15px;
+  padding: 10px;
+  font-size: 18px;
+}

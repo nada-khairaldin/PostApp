@@ -2,9 +2,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
- 
-  border: 1px solid #f28c38; 
-  color: #d9480f; 
+  border: 1px solid #f28c38;
+  color: #d9480f;
   padding: 20px 30px;
   border-radius: 12px;
   margin: 20px 0;

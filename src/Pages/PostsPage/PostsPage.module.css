@@ -4,9 +4,10 @@
   margin: 0 auto;
 }
 
-h1 {
+.post-heading {
   text-align: left;
   margin: 20px 5px;
   font-size: 40px;
-  color: peru;
+  color: #5a4fcf;
+  font-weight: 600;
 }

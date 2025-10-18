@@ -3,6 +3,7 @@ import type { commentType } from "../../types";
 import Comment from "../Comment/Comment";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
+import styles from "./Comments.module.css";
 
 function Comments({ postId }: { postId: string }) {
   const { fetchedData, error, isLoading } = useFetch<commentType[]>(
@@ -14,16 +15,15 @@ function Comments({ postId }: { postId: string }) {
       {error && <ErrorMessage message={error} />}
       {isLoading && <Loader />}
       {!error && !isLoading && (
-        <div>
-          <h3>Comments:</h3>
-          <ul>
+        <div className={styles["comments-container"]}>
+          <h3 className={styles["comments-section-heading"]}>Comments</h3>
+          <ul className={styles["comments-list"]}>
             {fetchedData?.map((comment) => (
               <Comment key={comment.id} comment={comment} />
             ))}
           </ul>
         </div>
       )}
-      ;
     </div>
   );
 }

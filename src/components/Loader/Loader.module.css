@@ -1,5 +1,5 @@
 .post-placeholder {
-  background: #fffaf6;
+  background: rgba(255, 255, 255, 0.774);
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -7,7 +7,7 @@
 }
 .title,
 .body {
-  background-color: rgba(102, 63, 31, 0.342);
+  background-color: #75757538;
   border-radius: 4px;
   height: 20px;
   margin-bottom: 10px;

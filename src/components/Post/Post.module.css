@@ -1,16 +1,27 @@
 .post {
   padding: 40px;
-   margin: 20px 0; 
+  margin: 15px 0;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .post-heading {
-  color: rgb(110, 68, 33);
+  color: #212121;
   margin-bottom: 20px;
   font-size: 25px;
 }
 
 .post-paragraph {
   font-size: 18px;
+  color: #757575;
+}
+
+.postLink {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.postLink:hover {
+  transform: translateY(-3px);
 }

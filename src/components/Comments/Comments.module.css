@@ -1,0 +1,22 @@
+.comments-container {
+  max-width: 800px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: -20px;
+  padding: 25px 35px;
+  background: #eeeeee5d;
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.comments-section-heading {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.comments-list {
+  list-style-type: none;
+}

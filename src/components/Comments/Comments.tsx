@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import type { commentType } from "../../types";
 import Comment from "../Comment/Comment";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 import styles from "./Comments.module.css";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function Comments({ postId }: { postId: string }) {
   const { fetchedData, error, isLoading } = useFetch<commentType[]>(
@@ -22,6 +24,9 @@ function Comments({ postId }: { postId: string }) {
               <Comment key={comment.id} comment={comment} />
             ))}
           </ul>
+          <Link to="/">
+            <FaArrowLeftLong className={styles.backButton} />
+          </Link>
         </div>
       )}
     </div>

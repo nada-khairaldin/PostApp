@@ -11,3 +11,10 @@
   color: #5a4fcf;
   font-weight: 600;
 }
+
+.no-posts-message {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-top: 20px;
+}

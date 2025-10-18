@@ -19,7 +19,9 @@ function PostsPage() {
         </>
       )}
       {!isLoading && error && <ErrorMessage message={error} />}
-      {!isLoading && !error && fetchedData && <Posts posts={fetchedData} />}
+      {!isLoading && !error && fetchedData && (fetchedData.length > 0  ? (<Posts posts={fetchedData}/>) : (
+    <p className={styles["no-posts-message"]}>No posts found</p>
+  ))}
     </div>
   );
 }

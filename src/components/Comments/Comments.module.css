@@ -20,3 +20,15 @@
 .comments-list {
   list-style-type: none;
 }
+
+.backButton {
+  font-size: 30px;
+  color: #5a4fcf;
+  transition: all 0.5s linear;
+}
+
+.backButton:hover {
+  color: #322b7c;
+  transform: translateY(-5px);
+  cursor: pointer;
+}

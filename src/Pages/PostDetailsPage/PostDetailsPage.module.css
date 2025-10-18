@@ -19,3 +19,11 @@
   padding: 10px;
   font-size: 18px;
 }
+
+.no-post-message {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-top: 20px;
+}
+

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./PageNotFound.module.css";
 function PageNotFound() {
   return (
@@ -5,9 +6,9 @@ function PageNotFound() {
       <h1>404</h1>
       <h2>Page Not Found</h2>
       <p>Sorry, the page you are looking for does not exist.</p>
-      <a href="/" className={styles["back-button"]}>
+      <Link to="/" className={styles["back-button"]}>
         Go Back Home
-      </a>
+      </Link>
     </div>
   );
 }

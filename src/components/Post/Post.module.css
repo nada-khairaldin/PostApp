@@ -24,4 +24,5 @@
 
 .postLink:hover {
   transform: translateY(-3px);
+  cursor: pointer;
 }

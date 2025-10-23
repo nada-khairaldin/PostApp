@@ -12,7 +12,6 @@ function useFetch<T>(url: string) {
         setIsLoading(true);
         try {
           const res = await axios.get(url);
-          console.log(res.data);
           setFetchedData(res.data);
         } catch (err) {
           if (typeof err === "string") setError(err);

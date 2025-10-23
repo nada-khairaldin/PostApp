@@ -25,13 +25,13 @@ function PostDetailsPage() {
         <p className={styles["no-post-message"]}>Post not found</p>
       )}
 
-      {!error && !isLoading && (
+      {!error && !isLoading && fetchedData && (
         <>
-          <h1 className={styles["post-heading"]}>{fetchedData?.title}</h1>
+          <h1 className={styles["post-heading"]}>{fetchedData.title}</h1>
 
           {authorId && <PostAuthor authorId={authorId} />}
 
-          <p className={styles["post-content"]}>{fetchedData?.body}</p>
+          <p className={styles["post-content"]}>{fetchedData.body}</p>
 
           {id && <Comments postId={id} />}
         </>

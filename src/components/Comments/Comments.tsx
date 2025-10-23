@@ -11,6 +11,7 @@ function Comments({ postId }: { postId: string }) {
   const { fetchedData, error, isLoading } = useFetch<commentType[]>(
     `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
   );
+  // if(!fetchedData) return <></>
 
   return (
     <div>
@@ -20,9 +21,13 @@ function Comments({ postId }: { postId: string }) {
         <div className={styles["comments-container"]}>
           <h3 className={styles["comments-section-heading"]}>Comments</h3>
           <ul className={styles["comments-list"]}>
-            {fetchedData?.map((comment) => (
-              <Comment key={comment.id} comment={comment} />
-            ))}
+            {fetchedData && fetchedData.length > 0 ? (
+              fetchedData.map((comment) => (
+                <Comment key={comment.id} comment={comment} />
+              ))
+            ) : (
+              <p>No comments</p>
+            )}
           </ul>
           <Link to="/">
             <FaArrowLeftLong className={styles.backButton} />

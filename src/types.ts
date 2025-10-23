@@ -21,3 +21,7 @@ export interface commentType {
   email: string;
   body: string;
 }
+
+export type startedPageType = {
+  setStartedPost: React.Dispatch<React.SetStateAction<number>>;
+};
